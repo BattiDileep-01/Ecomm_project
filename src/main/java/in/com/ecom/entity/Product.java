@@ -16,7 +16,7 @@ public class Product {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long productId;
+private Long id;
 
 private String name;
 private String description;
@@ -32,12 +32,12 @@ private Date lastUpdated;
 @JoinColumn(name = "category_id" , nullable = false)
 private ProductCategory category;
 
-    public long getProductId() {
-        return productId;
+    public Long getId() {
+        return id;
     }
 
-    public void setProductId(long productId) {
-        this.productId = productId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -48,20 +48,20 @@ private ProductCategory category;
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDesc(String desc) {
-        this.description = desc;
     }
 
     public BigDecimal getUnitPrice() {

@@ -16,18 +16,18 @@ public class ProductCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long CategoryId;
+    private long id;
     private String CategoryName;
 
     @OneToMany(mappedBy = "category" , cascade = CascadeType.ALL)
     private Set<Product> product;
 
-    public Long getCategoryId() {
-        return CategoryId;
+    public long getId() {
+        return id;
     }
 
-    public void setCategoryId(long categoryId) {
-        CategoryId = categoryId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getCategoryName() {
